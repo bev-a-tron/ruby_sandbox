@@ -5,13 +5,10 @@ module MyModule
 end
 
 class IncludeStuff
-
   include MyModule
-
   def method_1
     puts 'Inside include stuff!'
   end
-
 end
 
 x = IncludeStuff.new
@@ -33,3 +30,18 @@ end
 
 x = NewStuff.new
 x.method_1  # Inside the module!
+
+
+#########################################################
+
+
+class NewNewStuff < BaseClass
+  include MyModule
+
+  def method_1
+    puts 'inside the new new stuff class!'
+  end
+end
+
+x = NewNewStuff.new
+x.method_1  # Inside the new new stuff class!
