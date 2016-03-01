@@ -1,16 +1,5 @@
 class MergeTest
-  def do
-    additional_parameters = { msisdn: '234567890' }
-    parameters = {
-        from: 'Tigo',
-        to: '111111111111',
-        text: 'helloooooo',
-    }.merge additional_parameters
-    puts parameters
-  end
-
-  def does_it_overwrite
-    additional_parameters = { to: '234567890' }
+  def do(additional_parameters)
     parameters = {
         from: 'Tigo',
         to: '111111111111',
@@ -22,5 +11,7 @@ class MergeTest
 end
 
 m = MergeTest.new
-m.do
-m.does_it_overwrite
+m.do({ msisdn: '23456789' })
+m.do({ to: '2345667899' })  # does it overwrite?
+m.do({ })  # additional params is empty
+m.do({ to: nil })  # to is nil
