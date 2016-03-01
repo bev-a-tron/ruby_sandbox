@@ -1,0 +1,12 @@
+
+def send_sms(message, params = {})
+  puts message
+  puts params
+  puts params.class
+  params.each do |param|
+    puts param
+  end
+end
+
+send_sms('hello', ['123456789', 'lalalla'])
+send_sms('LOL', {test1: 1, test2: 2, test3: 3})
