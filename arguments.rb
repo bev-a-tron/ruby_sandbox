@@ -42,12 +42,12 @@ class Arguments
 end
 
 a = Arguments.new
-# a.one_kwarg('hi')
-# a.one_kwarg('hi', b: 'heyo')
-# a.two_kwargs('hi', c: 'Mr. Snuggles')
-# a.two_kwargs('hi', b: 'Mrs. Tiddlywinks')
-# a.two_kwargs('hi', b: 'yo', c: 'wassup?')
-# a.needs_kwarg(a: 'hi')
+a.one_kwarg('hi')
+a.one_kwarg('hi', b: 'heyo')
+a.two_kwargs('hi', c: 'Mr. Snuggles')
+a.two_kwargs('hi', b: 'Mrs. Tiddlywinks')
+a.two_kwargs('hi', b: 'yo', c: 'wassup?')
+a.needs_kwarg(a: 'hi')
 
 a.splat 'hello', 1, 2, 4, 'lalalla', 1.002
 a.stuff_and_splat 'hello'
