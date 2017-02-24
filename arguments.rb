@@ -30,27 +30,30 @@ class Arguments
   #   puts a
   # end
 
-  # def kwarg_and_args(a: 'hello', *args)
-  #   puts a
-  #   puts args[:test]
-  # end
+  def kwarg_and_args(a: 'hello', *args)
+    puts a
+    puts args[:test]
+  end
 
   def kwargs_only(*kwargs)
     puts kwargs
+    puts kwargs.class
+    puts kwargs[0]
   end
 
 end
 
 a = Arguments.new
-a.one_kwarg('hi')
-a.one_kwarg('hi', b: 'heyo')
-a.two_kwargs('hi', c: 'Mr. Snuggles')
-a.two_kwargs('hi', b: 'Mrs. Tiddlywinks')
-a.two_kwargs('hi', b: 'yo', c: 'wassup?')
-a.needs_kwarg(a: 'hi')
-
-a.splat 'hello', 1, 2, 4, 'lalalla', 1.002
-a.stuff_and_splat 'hello'
+# a.one_kwarg('hi')
+# a.one_kwarg('hi', b: 'heyo')
+# a.two_kwargs('hi', c: 'Mr. Snuggles')
+# a.two_kwargs('hi', b: 'Mrs. Tiddlywinks')
+# a.two_kwargs('hi', b: 'yo', c: 'wassup?')
+# a.needs_kwarg(a: 'hi')
+#
+# a.splat 'hello', 1, 2, 4, 'lalalla', 1.002
+# a.stuff_and_splat 'hello'
 # a.kwarg_and_splat a: 'blah blah blah'  # this doesn't work!!
-# a.kwarg_and_args a: 'lalalallala', test: 'hello'
-a.kwargs_only a: 'hellow', b: 'test test'
+a.kwarg_and_args a: 'lalalallala', test: 'hello'
+# a.kwargs_only a: 'hellow', b: 'test test'
+# a.kwargs_only params: { a: 'hellow', b: 'test test' }

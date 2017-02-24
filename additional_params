@@ -10,3 +10,4 @@ end
 
 send_sms('hello', ['123456789', 'lalalla'])
 send_sms('LOL', {test1: 1, test2: 2, test3: 3})
+send_sms('LOL', params: {test1: 1, test2: 2, test3: 3})
