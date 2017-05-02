@@ -10,3 +10,5 @@ def my_func
 end
 
 my_func
+
+# after rescue, it continues evaluating the rest of the function
